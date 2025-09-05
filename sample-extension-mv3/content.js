@@ -3,13 +3,17 @@
  * ExtPay is made available in this script through the manifest.json
  * "content_scripts" -> "js" array.
  */
-var extpay = ExtPay('sample-extension'); 
+const extpay = ExtPay("tunevo-test");
 
 // Add a "subscribe to Sample Extension!" button on every webpage.
-var button = document.createElement('button');
-button.innerText = 'Pay for ExtensionPay Sample Extension!'
-button.addEventListener('click', function(evt) {
-	extpay.openPaymentPage();
-}, true)
+var button = document.createElement("button");
+button.innerText = "Pay for ExtensionPay Sample Extension!";
+button.addEventListener(
+  "click",
+  function (evt) {
+    extpay.openPaymentPage();
+  },
+  true
+);
 
 document.body.prepend(button);
